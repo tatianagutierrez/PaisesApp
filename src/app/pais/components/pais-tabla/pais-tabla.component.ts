@@ -9,4 +9,7 @@ import { Country } from '../../intefaces/pais.interface';
 export class PaisTablaComponent {
   @Input()
   paises: Country[] = [];
+
+  @Input() 
+  mostrarCapital: boolean = false;
 }
