@@ -31,4 +31,10 @@ export class PaisService {
         map(paises => paises[0])
       );
   }
+
+  buscarRegion(region: string): Observable<Country[]> {
+    const url: string = `${this.apiUrl}/region/${region}`;
+
+    return this.http.get<Country[]>(url);
+  }
 }
